@@ -1,0 +1,15 @@
+#!/bin/sh
+cd "${0%/*}" || exit                                # Run from this directory
+. ${WM_PROJECT_DIR:?}/bin/tools/RunFunctions        # Tutorial run functions
+#------------------------------------------------------------------------------
+
+runApplication blockMesh
+runApplication setFields
+#runApplication $(getApplication)
+runApplication decomposePar
+runParallel $(getApplication)
+runApplication reconstructPar
+runApplication postProcess -func outputSurfaceIntegrateAlphaWater
+python3 calcOutputFlowHeight.py
+
+#------------------------------------------------------------------------------

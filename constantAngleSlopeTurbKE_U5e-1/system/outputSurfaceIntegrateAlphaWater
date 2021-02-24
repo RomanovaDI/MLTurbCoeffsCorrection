@@ -1,0 +1,18 @@
+outputSurfaceIntegrateAlphaWater
+{
+	type			surfaceFieldValue;
+	libs			(fieldFunctionObjects);
+	executeControl	writeTime;
+	writeControll	writeTime;
+	
+	fields			(alpha.water);
+	operation		areaIntegrate;
+	regionType		patch;
+	name			rightWall;
+
+	surfaceFormat   none;
+
+	writeFields     true;
+
+	log				false;
+}
