@@ -27,17 +27,17 @@ RAS
 
 	// Optional model coefficieints
 Cmu_pattern
-//C1_pattern
-//C2_pattern
-//C3_pattern
-//sigmak_pattern
-//sigmaEps_pattern
+C1_pattern
+C2_pattern
+C3_pattern
+sigmak_pattern
+sigmaEps_pattern
 //	Cmu			0.09;
-	C1			1.44;
-	C2			1.92;
-	C3			0.0;
-	sigmak		1.0;
-	sigmaEps	1.3;
+//	C1			1.44;
+//	C2			1.92;
+//	C3			0.0;
+//	sigmak		1.0;
+//	sigmaEps	1.3;
 }
 
 
